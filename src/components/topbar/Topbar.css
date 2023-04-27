@@ -1,0 +1,146 @@
+.topbar {
+	width: 100%;
+	flex:4;
+	height: 144px;
+	background-color: black;
+	position: relative;
+	top: 0;
+	z-index: 999;
+	/* margin-bottom: 10px; */
+}
+
+.topbarWrapper {
+	height: 100%;
+	padding: 0px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.topleft {
+	display: flex;
+}
+.text {
+	display: flex;
+	align-items: center;
+	margin-left: 26px;
+}
+
+.h2 {
+	color: #fff;
+	padding-right: 12px;
+	font-size: 12px;
+	font-weight: bold;
+	position: absolute;
+	top: 10px;
+}
+
+.ig {
+	position: relative;
+	height: 100%;
+	top: -11px;
+	right: -74px;
+}
+
+.imgOrange {
+	width: 35px;
+}
+
+/* .logo {
+    font-weight: bold;
+	font-size: 30px;
+	color: darkorange;
+	cursor: pointer; 
+} */
+
+.logo {
+	/* width: 150px; */
+	height: 100px;
+	/* object-fit: cover; */
+	/* margin-top: 7px; */
+}
+
+.topRight {
+	display: flex;
+	align-items: center;
+}
+.topbarIconContainer {
+	position: relative;
+	cursor: pointer;
+	margin-right: 10px;
+	color: #fff;
+}
+
+.topIconBadge {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: -5px;
+	right: 0px;
+	background-color: red;
+	color: white;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10px;
+}
+
+.setting:active {
+	transition: all 1s ease-out;
+	transform: rotate(180deg);
+}
+
+.menu {
+	top: 82px !important;
+	/* left: 1210px !important; */
+}
+
+.TopAvatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+/* .drop {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	box-shadow: inset 10px 10px 10px rgb(0 0 0 / 5%), 5px 5px 10px rgb(0 0 0 / 5%),
+		15px 10px 20px rgb(0 0 0 / 5%),
+		inset -10px -10px 15px rgb(255 255 255 / 90%);
+	border-radius: 50%;
+}
+
+.drop::before {
+	position: absolute;
+	content: "";
+	top: 13px;
+	left: 3px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+.drop::after {
+	position: absolute;
+	content: "";
+	top: 7px;
+	left: 11px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: rgb(252, 252, 252);
+}
+
+.drop img {
+	position: relative;
+	font-size: 58px;
+	top: 28%;
+	transform: translate(-50%);
+	left: 50%;
+	width: 23px;
+	border-radius: 3px;
+	cursor: pointer;
+	height: 24px;
+} */

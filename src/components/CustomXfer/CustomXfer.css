@@ -1,0 +1,15 @@
+.DeviceCont{
+    margin-top: 1rem;
+    
+}
+.AssetCont{
+    display: flex;
+    flex-direction: row;
+    gap: 19%;
+    justify-content: space-evenly;
+
+}
+.data-rbd-draggable-context-id{
+    top:0 !important;
+    left: 0 !important;
+}

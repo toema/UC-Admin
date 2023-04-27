@@ -1,0 +1,19 @@
+.LoadingScreen{
+    display: flex;
+    flex-direction: column;
+}
+.LoadingCircular{
+   display: flex;
+   flex-direction: column;
+   margin-top: 5%;
+}
+.loadingSVG{
+    /* width: 120px; */
+    align-self: center;
+    vertical-align: baseline;
+    
+}
+.LoadingText{
+    text-align: center;
+    margin-top: 2%;
+}
