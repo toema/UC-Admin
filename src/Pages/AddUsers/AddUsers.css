@@ -1,0 +1,88 @@
+.AddUsers{
+    flex: 4;
+}
+.top{
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+    padding: 10px;
+}
+
+.UserInfoContainer{
+    display: flex;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+    padding: 10px;
+    margin: 3%;
+    flex-direction: column;
+    
+}
+.UserInfoCont{
+    
+    display: grid;
+    /* align-items: baseline;
+    align-content: center; */
+    place-content: center;
+    /* flex-direction: column; */
+    
+}
+.BasicUserInfo{
+    display: flex;
+    justify-content: left;
+}
+
+.ElemCont{
+    display: flex;
+    align-items: baseline;
+    place-content: flex-end;
+    
+}
+#autoCompLabel{
+    position: relative;
+    bottom: -18px;
+    margin-right: 20px;
+}
+
+
+#autoCompLabel1{
+    position: relative;
+    bottom: -18px;
+    margin-right: 20px;
+}
+
+h2{
+    color: grey;
+}
+.LoadingInput{
+    position: relative;
+    right: -29px;
+    margin: -50px;
+}
+.switchLabelFormStyle{
+    place-content: space-between;
+}
+.siteIdLabel{
+    margin-right: 20px;
+}
+.EMfeatures{
+    display: flex;
+    left: 47px;
+    position: relative;
+    flex-direction: column;
+}
+/* .inputField{
+    margin-bottom: 10;
+} */
+
+/* .MuiTextField-root{
+    margin-left: 10px !important;
+} */
+
+TextField{
+margin-left: 10;
+}
+/* .buttons{
+
+} */
+/* Autocomplete{
+    width: 400px !important;
+} */
