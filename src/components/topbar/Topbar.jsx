@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Topbar.css";
 import { NotificationsNone, Language, Settings } from "@mui/icons-material";
-import Logo3 from "../../components/topbar/Logo3.jpeg";
+// import Logo3 from "../../components/topbar/Logo3.jpeg";
 import { Menu, MenuItem } from "@mui/material";
-import ob from "./OB.png"
+import ob from "./OB.png";
 
 export default function Topbar() {
 	const [open, setOpen] = useState(false);
@@ -14,17 +14,13 @@ export default function Topbar() {
 		<div className="topbar">
 			<div className="topbarWrapper">
 				<div className="topleft">
-					<img src={Logo3} alt="" className="logo" />
-					<div className="text">
+					{/* <img src={Logo3} alt="" className="logo" /> */}
+					{/* <div className="text">
 						<h2 className="h2">powered by</h2>
 						<div className="ig">
-							<img
-								src={ob}
-								className="imgOrange"
-								alt=""
-							/>
+							<img src={ob} className="imgOrange" alt="" />
 						</div>
-					</div>
+					</div> */}
 				</div>
 				{/* <div className='topMiddle'>
         <div className="drop">
