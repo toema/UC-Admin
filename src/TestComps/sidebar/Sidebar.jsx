@@ -115,7 +115,7 @@ export default function Sidebar() {
 
 							<span className="sp">Access provision</span>
 						</li>
-						<li className="sidebarListItem">
+						<li className="sidebarListItem" onClick={() => navigate(`/Tickets`)}>
 							<ConnectWithoutContactRounded className="SidebarIcon" />
 
 							<span className="sp">Contact Center</span>
@@ -143,7 +143,7 @@ export default function Sidebar() {
 							<Timeline className="SidebarIcon" />
 							<span className="sp">Analytics</span>
 						</li>
-						<li className="sidebarListItem" onClick={() => navigate(`/Tickets`)}>
+						<li className="sidebarListItem">
 							<TrendingUp className="SidebarIcon" />
 
 							<span className="sp">Tickets</span>

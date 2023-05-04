@@ -235,7 +235,7 @@ useEffect(() => {
           ><FormGroup onSubmit={handleSubmit(
             onSubmit
           )}>
-            <div className="UserInfoContainer">
+            <div className="mapping">
               <Typography
                 variant="h6"
                 component="h2"
@@ -387,7 +387,7 @@ useEffect(() => {
               </div>
             </div>
 
-            <div className="UserInfoContainer">
+            <div className="mapping">
               <Typography
                 variant="h6"
                 component="h2"
@@ -612,7 +612,7 @@ useEffect(() => {
               </div>
             </div>
             
-            <div className="UserInfoContainer">
+            <div className="mapping">
               <Typography
                 variant="h6"
                 component="h2"

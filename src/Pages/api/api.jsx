@@ -107,7 +107,7 @@ useEffect(()=>{
             <Typography className='title' variant='h6' sx={{mb:1}}>User Inforamtion</Typography>
             <div className="userItems">
             <div className="item">
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg"  sx={{ width: 70, height: 70 }}/>
+            <Avatar alt="Remy Sharp"   sx={{ width: 60, height: 60 }}>{users.users.UserInfo?.firstName[0].toUpperCase()+" "+users.users.UserInfo?.lastName[0].toUpperCase()}</Avatar>
               </div>
             <div className="userDetails">
               <Typography className='userName'variant='h7' sx={{mb:10,fz:20}}>{users.users.UserInfo?.firstName?users.users.UserInfo?.firstName:"None"} {users.users.UserInfo?.lastName?users.users.UserInfo?.lastName:"None"}</Typography>

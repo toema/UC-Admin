@@ -13,8 +13,10 @@ import {
   Route,
 } from "react-router-dom";
 import CheckTrans from "./components/testComp/CheckTrans";
-import {SnackbarProvider,useSnackbar} from "notistack"
+import {SnackbarProvider} from "notistack"
 import TransferUsers from "./Pages/TransferUsers/TransferUsers";
+import Tickets from "./Pages/Tickets/Tickets";
+import Ticket from "./Pages/Tickets/ticket/ticket";
 
 
 function App() {
@@ -48,7 +50,12 @@ function App() {
     <Route path="/test" element={<CheckTrans/>}/>
 <Route path="/api" element={<Les SendData={SendData} />}/>
 <Route  path="/AddUsers" element={<AddUsers SetSendData={SetSendData}/>}/>
+
 <Route  path="/TransferUsers" element={<TransferUsers />}/>
+<Route  path="/Tickets" >
+  <Route index element={<Tickets />}/>
+  <Route path=":id" element={<Ticket/>}/>
+</Route>
   </Routes>
 </div>
 
