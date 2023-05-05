@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./Tickets.css"
 import axios from 'axios'
-import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { DataGrid } from '@mui/x-data-grid';
+import {  useNavigate } from 'react-router-dom';
 
 export default function Tickets() {
   let navigate = useNavigate();

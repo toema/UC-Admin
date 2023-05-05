@@ -1,5 +1,4 @@
-import { CircularProgress, createTheme } from '@mui/material'
-import { ThemeProvider } from '@mui/styles';
+import { CircularProgress } from '@mui/material'
 import React from 'react'
 import "./CustomLoading.css"
 
