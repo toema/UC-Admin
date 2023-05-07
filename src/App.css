@@ -1,7 +1,13 @@
 .container {
-display: flex;}
-.left_main{
-    /* flex-direction: column; */
-    flex: 4;
+	display: flex;
 }
-
+.left_main {
+	/* flex-direction: column; */
+	flex: 4;
+}
+/* ::-webkit-scrollbar {
+	display: none;
+}
+::-webkit-scrollbar-thumb {
+	display: none;
+} */
