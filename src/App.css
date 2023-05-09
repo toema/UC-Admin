@@ -1,0 +1,11 @@
+.container {
+display: flex;}
+.left_main{
+    flex: 4;
+}
+
+.right-main{
+    
+        flex: 4;
+    
+}

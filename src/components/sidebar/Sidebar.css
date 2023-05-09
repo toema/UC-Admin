@@ -1,0 +1,137 @@
+.sidebar {
+	flex: 1;
+	/* height: calc(100vh - 50px); */
+	min-height: 100vh;
+	background-color: black;
+}
+
+/* .sidebar::-webkit-scrollbar-thumb {
+	position: absolute;
+	width: 10px;
+	background-color: aqua;
+}
+.sidebar::-webkit-scrollbar-track {
+	position: absolute;
+	width: 10px;
+	background-color: aqua;
+} */
+
+.sidebarWrapper {
+	padding: 0 0 0 20px;
+	color: #ffffffd5;
+}
+
+.container-text-logo {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-right: 2.3rem;
+}
+
+.imgLogo {
+	display: flex;
+	justify-content: center;
+	margin: 5px 0 10px 0;
+}
+
+.logo3 {
+	max-width: 120px;
+}
+.h2 {
+	color: #fff;
+	padding-right: 6px;
+	font-size: 8px;
+	font-weight: bold;
+	position: relative;
+	left: -18px;
+	top: -29px;
+}
+
+.ig {
+	position: relative;
+	height: 100%;
+	top: -38px;
+	right: -36px;
+}
+
+.imgOrange {
+	width: 20px;
+}
+
+.sidebarMenu {
+	margin-bottom: 10px;
+
+	/* height: 20%; */
+}
+.sidebarTitle1,
+.sidebarTitle2,
+.sidebarTitle3,
+.sidebarTitle4 {
+	font-size: 15px;
+	color: white;
+	font-weight: bold;
+	/* margin: 5px 0px 10px 0px; */
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* transition: all 1s ease; */
+}
+.sidebarTitle1:hover,
+.sidebarTitle2:hover,
+.sidebarTitle3:hover,
+.sidebarTitle4:hover {
+	background-color: rgb(128 128 128 / 0.1);
+	border-right: 3px solid darkorange;
+	/* padding: 10px; */
+}
+
+.arrowIcon1.active,
+.arrowIcon2.uc,
+.arrowIcon3.seif,
+.arrowIcon4.mah {
+	transform: rotate(90deg);
+	font-size: 22px;
+	color: white;
+	transition: all 0.5s ease;
+}
+
+.arrowIcon1,
+.arrowIcon2,
+.arrowIcon3,
+.arrowIcon4 {
+	/* padding-right: 10px; */
+	font-size: 22px;
+}
+.sidebarList1,
+.sidebarList2,
+.sidebarList3,
+.sidebarList4 {
+	list-style: none;
+	padding: 0 0 0 5px;
+}
+.sidebarListItem {
+	padding: 10px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	/* border-radius: 10px; */
+}
+
+.sidebarList1.active,
+.sidebarList2.uc,
+.sidebarList3.seif,
+.sidebarList4.mah {
+	position: absolute;
+	top: -100%;
+}
+
+.sidebarListItem:hover {
+	background-color: rgb(128 128 128 / 0.1);
+	border-right: 3px solid darkorange;
+}
+
+.SidebarIcon {
+	margin-right: 5px;
+	font-size: 20px !important;
+}
