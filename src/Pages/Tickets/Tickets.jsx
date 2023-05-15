@@ -16,8 +16,7 @@ export default function Tickets() {
     console.log("request for tickets actions")
     await axiosClient.get("/Tickets").then(res=>{
       console.log(res)
-      res.data !== null?setTickets(res):setTickets({"data":{"data":"no data to be displayed"}})
-      
+      res.data !== null?setTickets(res.data):setTickets({"data":{"data":"no data to be displayed"}})
       
     })
 
@@ -42,7 +41,6 @@ export default function Tickets() {
   useEffect(() => {
     Checktickets();
     // newRows()
-    
   },[]);
   // useEffect(()=>{
   //   newRows()
@@ -56,7 +54,7 @@ export default function Tickets() {
             <h1>Tickets</h1>
           </div>
           <div className="mapping">
-          <div style={{ height: 300, width: '100%' }}>
+          <div style={{ height: '100rm', width: '100%' }}>
       <DataGrid  onRowClick={(row)=>{nav(row)}} getRowId={(row) => row["_id"]} sx={{boxShadow: 2,
     border: 2,}}rows={Tickets.data} columns={columns} />
     </div>
