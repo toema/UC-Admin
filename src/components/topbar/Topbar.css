@@ -15,10 +15,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: relative;
 }
-.topleft {
-	display: flex;
-}
+
 /* .text {
 	display: flex;
 	align-items: center;
@@ -59,9 +58,30 @@
 	/* margin-top: 7px; */
 }
 
+.contain {
+	height: 80px;
+	display: flex;
+	align-items: center;
+}
+
+.timer {
+	display: flex;
+	align-items: flex-start;
+	height: 80px;
+	position: relative;
+	right: 30px;
+	top: 8px;
+}
+h1 {
+	color: #e06d0f;
+	font-size: initial;
+}
+
 .topRight {
 	display: flex;
 	align-items: center;
+	position: absolute;
+	right: 7px;
 }
 .topbarIconContainer {
 	position: relative;

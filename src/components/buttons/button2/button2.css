@@ -1,0 +1,21 @@
+.buttonCon2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	gap: 10px;
+}
+
+.Button2 {
+	border: none;
+	padding: 10px 15px;
+	color: black;
+	background-color: rgb(255, 136, 0);
+	outline: none;
+	font-weight: 600;
+}
+
+.Button2:hover {
+	background-color: black;
+	color: white;
+}
