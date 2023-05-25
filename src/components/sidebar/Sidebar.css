@@ -1,24 +1,68 @@
-.sidebar {
+/* .sidebar {
 	flex: 1;
-	/* height: calc(100vh - 50px); */
+	height: calc(100vh - 50px);
 	min-height: 100vh;
 	background-color: black;
-}
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+} 
+*/
 
-/* .sidebar::-webkit-scrollbar-thumb {
-	position: absolute;
-	width: 10px;
-	background-color: aqua;
-}
-.sidebar::-webkit-scrollbar-track {
-	position: absolute;
-	width: 10px;
-	background-color: aqua;
+/* .sidebarWrapper {
+	padding: 0 10px 0 20px;
+	flex: 1;
+	overflow: hidden;
+	color: #ffffffd5;
+	overflow-y: auto;
+	flex-basis: 1e-9px;
 } */
 
+.sidebar {
+	flex: 1;
+	height: calc(100vh - 50px);
+	min-height: 100vh;
+	width: 100%;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	z-index: 9999;
+	position: sticky;
+	top: 0;
+	left: 0;
+}
+.sidebar222 {
+	/* position: sticky; */
+	/* top: 0;
+	left: 0; */
+	/* z-index: 9999; */
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	flex-basis: 1e-9px;
+	overflow-y: auto;
+	overflow: hidden;
+}
 .sidebarWrapper {
-	padding: 0 0 0 20px;
+	padding: 0 10px 0 20px;
+	flex: 1;
+	overflow: hidden;
 	color: #ffffffd5;
+	overflow-y: auto;
+	flex-basis: 1e-9px;
+	/* display: flex; */
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	width: 10px;
+	height: 3px;
+	background-color: gray;
+	border-radius: 5px;
+	height: 100px;
 }
 
 .container-text-logo {
@@ -26,6 +70,9 @@
 	justify-content: space-evenly;
 	align-items: center;
 	margin-right: 2.3rem;
+	/* position: sticky;
+	top: 0;
+	z-index: 0; */
 }
 
 .imgLogo {
@@ -60,8 +107,6 @@
 
 .sidebarMenu {
 	margin-bottom: 10px;
-
-	/* height: 20%; */
 }
 .sidebarTitle1,
 .sidebarTitle2,
@@ -70,12 +115,10 @@
 	font-size: 15px;
 	color: white;
 	font-weight: bold;
-	/* margin: 5px 0px 10px 0px; */
 	padding: 10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/* transition: all 1s ease; */
 }
 .sidebarTitle1:hover,
 .sidebarTitle2:hover,
@@ -83,7 +126,7 @@
 .sidebarTitle4:hover {
 	background-color: rgb(128 128 128 / 0.1);
 	border-right: 3px solid darkorange;
-	/* padding: 10px; */
+	visibility: visible;
 }
 
 .arrowIcon1.active,
@@ -100,7 +143,6 @@
 .arrowIcon2,
 .arrowIcon3,
 .arrowIcon4 {
-	/* padding-right: 10px; */
 	font-size: 22px;
 }
 .sidebarList1,
@@ -115,7 +157,6 @@
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	/* border-radius: 10px; */
 }
 
 .sidebarList1.active,
