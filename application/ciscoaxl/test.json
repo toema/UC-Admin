@@ -1,0 +1,1 @@
+[{'extenion': '1018', 'partition': None, 'devices': [{'type': 'Device', 'device': 'TCTUSER018'}, {'type': 'Device', 'device': 'CSFUSER001'}]}, {'extenion': '1018', 'partition': 'losfeliz-pt', 'devices': [{'type': 'Device', 'device': 'CSFUSER001'}]}]

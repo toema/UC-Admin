@@ -1,0 +1,2 @@
+FLASK_APP=UC Admin
+FLASK_ENV=development

@@ -32,12 +32,12 @@ export default function Sidebar() {
 				<div className="imgLogo">
 					<img src={Logo3} alt="logo3" className="logo3" />
 				</div>
-				<div className="text">
+				{/* <div className="text">
 					<h2 className="h2">powered by</h2>
 					<div className="ig">
 						<img src={ob} className="imgOrange" alt="" />
 					</div>
-				</div>
+				</div> */}
 			</div>
 			<div className="sidebarWrapper">
 				<div className="sidebarMenu">
