@@ -3,7 +3,7 @@
 Automating some tasks on CUCM and CUC servers.
 
 
-***please use **full** branch as main is only for front end developing for now***
+*please use ***full*** branch as main is only for front end developing for now*
 
 ## Enable AXL SOAP Service on CUCM:
 
@@ -15,7 +15,7 @@ Tools > Service Activation:
 
 Enable the "Cisco AXL Web Service"
 
-![](application/docs/2020-06-01-11-13-59.png)
+![](docs/2020-06-01-11-13-59.png)
 
 ---
 
@@ -32,18 +32,18 @@ On the top right drop down list "Related Links".
 
 Select "Assign Role to User Group" and select "Standard AXL API Access"
 
-![](application/docs/2020-06-01-11-29-06.png)
+![](docs/2020-06-01-11-29-06.png)
 
 
 > Step 3 - Create a new Application User
 
 CUCM > User Management > Application User > Add.
 
-![](application/docs/2020-06-01-11-33-25.png)
+![](docs/2020-06-01-11-33-25.png)
 
 Add the User Group "AXL Group" to this user so that after saving the roles of the new Application User appear as in the following screen:
 
-![](application/docs/2020-06-01-11-43-34.png)
+![](docs/2020-06-01-11-43-34.png)
 
 ### Create DB
 ```sh
@@ -85,7 +85,7 @@ $ python manage.py runserver
 ### Test Back-End
 
 ```sh
-$ python test.py --cov-report=term --cov-report=html --cov=application/ tests/
+$ python test.py --cov-report=term --cov-report=html --cov= tests/
 ```
 
 ### Run Front-End
