@@ -1,70 +1,168 @@
-# Getting Started with Create React App
+# UC Admin #
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Automating some tasks on CUCM and CUC servers.
 
-## Available Scripts
 
-In the project directory, you can run:
+**please use *full* branch as main is only for front end developing for now**
 
-### `npm start`
+## Enable AXL SOAP Service on CUCM:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Enable the AXL SOAP interface
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Browse to the CUCM Serviceability page on https://<IP_CUCM>/ccmservice
 
-### `npm test`
+Tools > Service Activation:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Enable the "Cisco AXL Web Service"
 
-### `npm run build`
+![](application/docs/2020-06-01-11-13-59.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Create an AXL Service Account
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Step 1 - Create an AXL User Group
 
-### `npm run eject`
+CUCM > User Management > User Group > Add.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> Step 2 - Assign the AXL role to the group
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+On the top right drop down list "Related Links". 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Select "Assign Role to User Group" and select "Standard AXL API Access"
 
-## Learn More
+![](application/docs/2020-06-01-11-29-06.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Step 3 - Create a new Application User
 
-### Code Splitting
+CUCM > User Management > Application User > Add.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![](application/docs/2020-06-01-11-33-25.png)
 
-### Analyzing the Bundle Size
+Add the User Group "AXL Group" to this user so that after saving the roles of the new Application User appear as in the following screen:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![](application/docs/2020-06-01-11-43-34.png)
 
-### Making a Progressive Web App
+### Create DB
+```sh
+$ export DATABASE_URL="postgresql://username:password@localhost/mydatabase"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+or
 
-### Advanced Configuration
+$ export DATABASE_URL="mysql+mysqlconnector://username:password@localhost/mydatabase"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+or
 
-### Deployment
+$ export DATABASE_URL="sqlite:///your.db"
+```
+(More about connection strings in this [flask config guide](http://flask-sqlalchemy.pocoo.org/2.1/config/).)
+```
+$ python manage.py create_db
+$ python manage.py db upgrade
+$ python manage.py db migrate
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To update database after creating new migrations, use:
 
-### `npm run build` fails to minify
+```sh
+$ python manage.py db upgrade
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Install Front-End Requirements
+```sh
+$ cd static
+$ npm install
+```
+
+### Run Back-End
+
+```sh
+$ python manage.py runserver
+```
+
+### Test Back-End
+
+```sh
+$ python test.py --cov-report=term --cov-report=html --cov=application/ tests/
+```
+
+### Run Front-End
+
+```sh
+$ cd static
+$ npm start
+```
+
+### Build Front-End
+
+```sh
+$ npm run build:production
+```
+
+### New to Python?
+
+If you are approaching this demo as primarily a frontend dev with limited or no python experience, you may need to install a few things that a seasoned python dev would already have installed.
+
+Most Macs already have python 2.7 installed but you may not have pip install. You can check to see if you have them installed:
+
+```
+$ python --version
+$ pip --version 
+```
+
+If pip is not installed, you can follow this simple article to [get both homebrew and python](https://howchoo.com/g/mze4ntbknjk/install-pip-on-mac-os-x)
+
+After you install python, you can optionally also install python 3
+
+```
+$ brew install python3
+```
+
+Now you can check again to see if both python and pip are installed. Once pip is installed, you can download the required flask modules:
+
+```
+$ sudo pip install flask flask_script flask_migrate flask_bcrypt 
+```
+
+Now, you can decide on which database you wish to use. 
+
+#### New to MySQL? 
+
+If you decide on MySQL, install the free community edition of [MySQL](https://dev.mysql.com/downloads/mysql/) and [MySQL Workbench](https://www.mysql.com/products/workbench/)
+
+1. start MySQL from the System Preferences
+2. open MySQL Workbench and [create a database](http://stackoverflow.com/questions/5515745/create-a-new-database-with-mysql-workbench) called mydatabase but don't create the tables since python will do that for you
+3. Install the MySQL connector for Python, add the DATABASE_URL configuration, and create the database and tables
+
+```
+$ sudo pip install mysql-connector-python-rf
+$ export DATABASE_URL="mysql+mysqlconnector://username:password@localhost/mydatabase"
+$ python manage.py create_db
+```
+
+Note: you do not need to run "python manage.py db upgrade" or "python manage.py db migrate" if its your first go at it
+
+4. Run Back-End
+
+```
+$ python manage.py runserver
+```
+
+If all goes well, you should see ```* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)``` followed by a few more lines in the terminal.
+
+5. open a new tab to the same directory and run the front end
+
+```
+$ cd static
+$ npm install
+$ npm start
+```
+
+6. open your browser to http://localhost:3000/register and setup your first account
+7. enjoy! By this point, you should be able to create an account and login without errors. 
+
+
+
+
